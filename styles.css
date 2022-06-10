@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
 *,*::after,*::before{
     margin : 0rem;
     padding : 0rem;
@@ -6,4 +8,101 @@
 
 body{
     background-color: hsl(217, 54%, 11%);
+    height : 100vh;
+    display : flex;
+    flex-direction : row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Outfit', sans-serif;
+}
+
+.NFT{
+    background-color: hsl(216, 50%, 16%);
+    width : 25%;
+    border-radius: 10px;
+}
+
+
+
+.NFT-CONTENT{
+    width : 80%;
+    position: relative;
+    left : 50%;
+    transform: translateX(-50%);
+}
+
+.NFT > img{
+    display: block;
+    width : 80%;
+    position: relative;
+    left : 50%;
+    transform: translateX(-50%);
+    margin-top : .75rem;
+    border-radius: 5px;
+}
+
+#Equilibrium{
+    font-size : 18px;
+    color : white;
+    padding : 1rem .75rem .75rem .75rem;
+    padding-left : 0rem;
+    font-weight: 600;
+}
+
+#collection{
+    color : hsl(215, 51%, 70%);
+    font-weight: 300;
+    font-size: .9rem;
+    line-height: 1.45rem;
+}
+
+.eth{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin : 1.5rem 0rem 1rem 0rem;
+    font-size : .9rem;
+}
+
+.content p, .days p{
+    display: inline-block;
+    color : hsl(178, 100%, 50%);
+    position: relative;
+    transform: translateY(-20%);
+    margin-left: .25rem;
+    font-weight: 400;
+}
+
+.days p{
+    color : hsl(215, 51%, 70%);
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: .75rem;
+    font-size : .85rem;
+    font-weight: 400;
+}
+
+.profile img{
+    height : 30px;
+    width : 30px;
+}
+
+.profile p{
+    margin-left : .45rem;
+    color : white;
+}
+
+#create{
+    color : hsl(215, 51%, 70%);
+}
+
+#line{
+    height : 3px;
+    border-radius: 2px;
+    background-color: hsl(215, 32%, 27%);
+    margin-bottom: 1rem;
 }
