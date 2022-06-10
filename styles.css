@@ -29,14 +29,53 @@ body{
     transform: translateX(-50%);
 }
 
-.NFT > img{
-    display: block;
+.NFT-IMAGE{
     width : 80%;
     position: relative;
     left : 50%;
     transform: translateX(-50%);
     margin-top : .75rem;
-    border-radius: 5px;
+    border-radius : 5px;
+    overflow-y: hidden;
+}
+
+.NFT-IMAGE img{
+    display: block;
+    width : 100%;
+    border-radius : 5px;
+}
+
+.NFT-IMAGE::after{
+    background-color: hsla(178, 100%, 50%, 0.6);
+    position: absolute;
+    top : 0;
+    left : 0;
+    bottom : 0;
+    right : 0;
+    content : "";
+    transform: translateY(100%);
+}
+
+@keyframes animate{
+    0%{
+        transform: translateY(100%);
+    }
+    25%{
+        transform: translateY(75%);
+    }
+    50%{
+        transform: translateY(50%);
+    }
+    75%{
+        transform: translateY(25%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+.NFT-IMAGE:hover::after{
+    animation: animate .5s ease forwards;
 }
 
 #Equilibrium{
@@ -104,6 +143,9 @@ body{
     background-color: hsl(215, 32%, 27%);
     margin-bottom: 1rem;
 }
+
+
+
 
 @media (max-width : 360px){
     .NFT{
