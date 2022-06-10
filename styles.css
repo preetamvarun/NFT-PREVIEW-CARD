@@ -39,6 +39,23 @@ body{
     overflow-y: hidden;
 }
 
+.NFT-IMAGE::before{
+    position: absolute;
+    content : url("./images/icon-view.svg");
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%,-50%);
+    opacity : 0;
+    transition: opacity 1.5s ease;
+    z-index: 2;
+}
+
+.NFT-IMAGE:hover::before{
+    transition : opacity 2s ease;
+    opacity : 1;
+    cursor: pointer;
+}
+
 .NFT-IMAGE img{
     display: block;
     width : 100%;
@@ -54,9 +71,28 @@ body{
     right : 0;
     content : "";
     transform: translateY(100%);
+    animation: downwards .5s ease;
 }
 
-@keyframes animate{
+@keyframes downwards{
+    0%{
+        transform: translateY(0);
+    }
+    25%{
+        transform: translateY(25%);
+    }
+    50%{
+        transform: translateY(50%);
+    }
+    75%{
+        transform: translateY(75%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+
+@keyframes upwards{
     0%{
         transform: translateY(100%);
     }
@@ -75,7 +111,7 @@ body{
 }
 
 .NFT-IMAGE:hover::after{
-    animation: animate .5s ease forwards;
+    animation: upwards .5s ease forwards;
 }
 
 #Equilibrium{
@@ -84,6 +120,12 @@ body{
     padding : 1rem .75rem .75rem .75rem;
     padding-left : 0rem;
     font-weight: 600;
+    transition: color .75s ease;
+}
+
+#Equilibrium:hover{
+    color :hsl(178, 100%, 50%);
+    cursor: pointer;
 }
 
 #collection{
@@ -131,6 +173,12 @@ body{
 .profile p{
     margin-left : .45rem;
     color : white;
+    transition: color .75s ease;
+}
+
+.profile p:hover{
+    color : hsl(178, 100%, 50%);
+    cursor: pointer;
 }
 
 #create{
@@ -143,9 +191,6 @@ body{
     background-color: hsl(215, 32%, 27%);
     margin-bottom: 1rem;
 }
-
-
-
 
 @media (max-width : 360px){
     .NFT{
