@@ -1,4 +1,4 @@
-# QR-CODE-COMPONENT
+## NFT PREVIEW CARD
 This is a front end mentor challenge
 
 ## Technologies used 
@@ -7,4 +7,5 @@ This is a front end mentor challenge
 
 
 ## Live-demo ⤵️
-https://qr-code-component-front-end-mentor.netlify.app/
+https://nft-preview-card-front-end-mentor.netlify.app/
+
